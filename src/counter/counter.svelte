@@ -1,5 +1,6 @@
 <script>
   let count = 0;
+  $: squaredCount = count**2;
 
   function handleClick() {
     count += 1;
@@ -13,3 +14,4 @@
 <button on:click={handleClick} on:dblclick|preventDefault={handleDoubleClick}>
   Clicked {count} {count === 1 ? 'time' : 'times'}
 </button>
+<p>The times that the buttons was clicked - squared - is: {squaredCount}</p>
